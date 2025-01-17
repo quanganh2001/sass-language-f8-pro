@@ -1,0 +1,131 @@
+// Global
+$primary-color: red;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+// Ví dụ 1
+// .card {
+//   width: 300px;
+//   padding: 20px;
+//   border: 2px solid #ccc;
+//   border-radius: 8px;
+
+//   .thumb {
+//     width: 100%;
+//   }
+  
+//   .title {
+//     font-size: 22px;
+//   }
+
+//   strong {
+//     color: red;
+//   }
+  
+//   .desc {
+//     font-size: 18px;
+//   }
+  
+//   .btn-link {
+//     color: #666;
+//   }
+// }
+
+// Ví dụ 2
+// .card {
+//   width: 300px;
+//   padding: 20px;
+//   border: 2px solid #ccc;
+//   border-radius: 8px;
+
+//   // &: Parent selector
+//   &-thumb {
+//     width: 100%;
+//   }
+  
+//   &-title {
+//     font-size: 22px;
+//   }
+
+//   strong {
+//     color: red;
+//   }
+  
+//   &-desc {
+//     font-size: 18px;
+//   }
+  
+//   &-btn-link {
+//     color: #666;
+//   }
+// }
+
+// Ví dụ 3
+.card {
+  // Local
+  $font-family: monospace;
+
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+
+  &:hover {
+    background: #f1f1f1;
+  }
+
+  &:hover &__title {
+    color: blue;
+  }
+
+  &:hover &__title::before {
+    color: orange;
+  }
+
+  &--bottom {
+    margin-top: 100px;
+  }
+
+  // &: Parent selector
+  &__thumb {
+    width: 100%;
+  }
+  
+  &__title {
+    font-size: 22px;
+    font-family: $font-family;
+    color: $primary-color;
+
+    strong {
+      color: $primary-color;
+    }
+
+    &--large {
+      font-size: 32px;
+    }
+
+    &::before {
+      content: "1. ";
+    }
+
+    // &:hover {
+    //   color: green;
+    // }
+  }
+  
+  &__desc {
+    font: {
+      size: 18px;
+      weight: 600;
+      style: italic;
+    }
+  }
+  
+  &__btn-link {
+    color: #666;
+  }
+}
