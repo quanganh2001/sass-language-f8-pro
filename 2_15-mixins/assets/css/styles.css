@@ -1,0 +1,47 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+}
+
+.list {
+  --column: 4;
+  --spacing: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--spacing);
+  margin-left: calc(-1 * var(--spacing));
+}
+.list > * {
+  width: calc(100% / var(--column) - var(--spacing));
+  margin-left: var(--spacing);
+}
+.list .item {
+  background: olivedrab;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.news-list {
+  --column: 2;
+  --spacing: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--spacing);
+  margin-left: calc(-1 * var(--spacing));
+  margin-top: 30px;
+}
+.news-list > * {
+  width: calc(100% / var(--column) - var(--spacing));
+  margin-left: var(--spacing);
+}
+.news-list .news-item {
+  background: orangered;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

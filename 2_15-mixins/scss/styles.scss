@@ -1,0 +1,94 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+}
+
+// Ví dụ 1
+// @mixin move($x, $y: null) {
+//   translate: $x $y;
+// }
+
+// @mixin flexCenter {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// @mixin size($width, $height: null) {
+//   width: $width;
+//   height: $height;
+// }
+
+// @mixin rounded($tl, $tr: $tl, $br: $tl, $bl: $tl) {
+//   border-radius: $tl $tr $br $bl;
+//   @include move(100px)
+// }
+
+// .center {
+//   @include flexCenter;
+//   @include size(200px, 300px);
+//   @include rounded(10px, $bl: 60px);
+
+//   background: orange;
+
+//   font: {
+//     size: 30px;
+//     weight: 600;
+//   }
+// }
+
+// .box {
+//   @include flexCenter;
+//   @include size(150px);
+
+//   margin-top: 30px;
+//   background: olivedrab;
+
+//   font: {
+//     size: 24px;
+//     weight: 600;
+//   }
+// }
+
+@mixin grid($column, $spacing) {
+  --column: #{$column};
+  --spacing: #{$spacing};
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--spacing);
+  margin-left: calc(-1 * var(--spacing));
+
+  > * {
+    width: calc(100% / var(--column) - var(--spacing));
+    margin-left: var(--spacing);
+  }
+}
+
+.list {
+  @include grid(4, 30px);
+
+  .item {
+    background: olivedrab;
+
+    font: {
+      size: 20px;
+      weight: 600;
+    }
+  }
+}
+
+.news-list {
+  @include grid(2, 20px);
+  margin-top: 30px;
+
+  .news-item {
+    background: orangered;
+    padding: 20px;
+  }
+}
