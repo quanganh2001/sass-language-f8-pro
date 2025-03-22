@@ -1,0 +1,12 @@
+img.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */
