@@ -1,0 +1,15 @@
+// 1. Equality (==, !=)
+// 2. Relational (>, <, >=, <=)
+// 3. Numeric (+, -, *, /, %)
+// 4. Logical (not, and, or)
+// 5. Interpolation
+
+$selector: ".container";
+$property: "display";
+$placement: "left";
+
+#{$selector} {
+  #{$property}: flex;
+  margin-#{$placement}: 100px;
+  width: 100px;
+}
