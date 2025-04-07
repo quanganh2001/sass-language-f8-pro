@@ -4,7 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: system-ui;
+}
+
 .card-item {
-  width: 33.333%;
-  background: orange;
+  padding: 10px;
+  border: 1px dashed orange;
+  text-align: center;
+  font-weight: 600;
 }
