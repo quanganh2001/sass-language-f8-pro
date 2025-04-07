@@ -3,3 +3,8 @@
 ::after {
   box-sizing: border-box;
 }
+
+.card-item {
+  width: 33.333%;
+  background: orange;
+}
