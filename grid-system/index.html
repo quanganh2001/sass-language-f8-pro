@@ -10,51 +10,53 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- 
+      1. Gutters chưa hoạt động với class "row" "col" - Fixed
+      2. Bị mất gutters khi không có biến "--spacer" - Fixed
+      3. Chưa kết hợp được "row-cols-*" và "col-*" - Fixed
+      4. Một vài chỗ code chưa tối ưu:
+        - Class "container-fluid" thiếu padding - Fixed
+        - Thêm g-0 cho các breakpoints - Fixed
+        - Thêm comments - Completed
+     -->
     <div class="container">
       <!-- Row 1 -->
-      <div class="row">
-        <div class="col-1">
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4">
+        <div class="col">
           <div class="card-item">1</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">2</div>
         </div>
-        <div class="col-1">
+        <div class="col col-lg-6">
           <div class="card-item">3</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">4</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">5</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">6</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">7</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">8</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">9</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">10</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">11</div>
         </div>
-        <div class="col-1">
+        <div class="col">
           <div class="card-item">12</div>
-        </div>
-      </div>
-
-      <!-- Row 2 -->
-      <div class="row">
-        <div class="col-lg-12 offset-lg-0 col-sm-8 offset-sm-2 col-6 offset-3">
-          <div class="card-item">1</div>
         </div>
       </div>
     </div>
